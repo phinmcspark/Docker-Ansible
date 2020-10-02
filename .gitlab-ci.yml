@@ -6,6 +6,8 @@ stages:
 lint:
      stage: lint
      image: hadolint/hadolint:latest-debian
+     before_script:
+          - echo hadolint --version
      script:
           - echo "Execution du stage lint"
           - hadolint Dockerfile
